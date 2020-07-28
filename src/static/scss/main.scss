@@ -1,0 +1,311 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "variables";
+
+@mixin mediaQ($arg){
+    @media screen and (max-width:$arg){
+        @content;
+    }
+}
+
+body {
+    background: $body;
+    height: 100vh;
+}
+
+
+// NAVBAR
+
+.navbar{
+    background-color: $navBar;
+        .navbar-toggler{
+            background: none;
+        }
+        .navbar-reservation{
+            color: white;
+            font-family: "avant_gardedemiregular";
+            background: $green;
+            border: none;
+            padding: 12px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 10px;
+            &:hover {
+                background: $greyBlue;
+                transition: all 0.5s;
+            }
+            @include mediaQ(415px){
+                padding: 8px 18px;
+            }
+        }
+}
+
+
+// CAROUSEL
+
+.carousel {
+    .carousel-caption {
+        top: 49%;
+        transform: translateY(-50%);
+        bottom: initial;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        @include mediaQ(415px){
+            top: 39%;
+        }
+        .caption-text {
+            color: $greyBlue;
+            font-size: large;
+            font-family: "linotype_didotroman";
+            margin: 3em 0;
+            @include mediaQ(415px){
+                margin: 1em 0;
+                font-size: x-small;
+            }
+        }
+    }
+    button{
+        color: $greyBlue;
+        font-family: avant_gardedemiregular;
+        background: none;
+        border: 1px solid $greyBlue;
+        padding: 12px 45px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 11px;
+        &:hover{
+            color: white;
+            background: $greyBlue;
+            letter-spacing: 2px;
+            -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+            -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+            box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+            transition: all 0.8s ease 0s;
+        } 
+        @include mediaQ(415px){
+            font-size: 6px;
+            padding: 4px 15px;
+        }
+    }
+    .contact{
+        font-family: avant_gardedemiregular;
+        text-align: end;
+        margin-top: -25px;
+        padding-bottom: 25px;
+        padding-right: 18px;
+        color: white;
+        font-size: x-small;
+        @include mediaQ(415px){
+            font-size: xx-small;
+        }
+    }
+}
+
+
+// MAIN SECTION
+
+.main-section{
+    text-transform:uppercase;
+    text-align: center;
+    .container{
+        margin-top: 9em;
+        margin-bottom: 9em;
+        margin-right: auto;
+        margin-left: auto;
+        @include mediaQ(990px){
+            margin-top: 15%;
+            margin-bottom: 55%;
+        }
+    }
+    #container1{
+        margin-bottom: 15%;
+        @include mediaQ(990px){
+            margin-bottom: 15%;
+        }
+        #text1{
+            @include mediaQ(990px){
+                margin-bottom: 10%;
+            }
+        }
+    }
+    #container2{
+        @include mediaQ(990px){
+            margin-bottom: 55%;
+        }
+        #text2{
+            @include mediaQ(990px){
+                padding-top: 0%;
+                margin-bottom: 10%;
+            }
+        }
+    }
+    .time{
+        color: $green;
+        font-size: large;
+        font-family: brandon_grotesquelight;
+    }
+    h2{
+        font-family: "linotype_didotroman";
+        font-size: x-large;
+        margin: 1em 0;
+    }
+    p{
+        font-family: brandon_grotesquelight;
+        font-size: x-small;
+        letter-spacing: 1.3px;
+    }
+    .une{
+        max-width: 100%; 
+        height: auto;
+        position: absolute;
+        @include mediaQ(990px){
+            padding-left: 10%;
+            padding-right: 10%;
+            max-width: 100%; 
+            position: relative;
+        }
+    }
+    .deux{
+        max-width: 90%; 
+        height: auto;
+        padding-left: 47%;
+        padding-top: 2%;
+        z-index: 2;
+        position: relative;
+        @include mediaQ(990px){
+            padding-left: 10%;
+            padding-right: 10%;
+            max-width: 100%; 
+        }
+        
+    }
+    .trois{
+        max-width: 100%; 
+        height: auto;
+        z-index: 1;
+        position: absolute;
+        @include mediaQ(990px){
+            padding-left: 20%;
+            padding-right: 20%;
+            max-width: 100%; 
+            position: relative;
+        }
+    }
+    .quatre{
+        max-width: 52%; 
+        z-index: 2;
+        height: auto;
+        padding-left: 5%;
+        padding-top: 6%;
+        position: relative;
+        @include mediaQ(990px){
+            padding-left: 10%;
+            padding-right: 10%;
+            max-width: 100%; 
+        }
+    }
+}
+
+
+// CARD-DECK
+
+.card-deck{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 30%;
+    margin-bottom: 5%;
+    @include mediaQ(990px){
+        margin-bottom: 20%;
+    }
+    .card{
+        border: none;
+        border-radius: 0;
+        margin-bottom: 10%;
+
+        .card-body{
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-bottom: 0;
+        }
+    }
+    #card1{
+        @include mediaQ(990px){
+            margin-bottom: 70%;
+        }
+    }
+    #card2{
+        @include mediaQ(990px){
+            margin-bottom: 70%;
+        }
+    }
+    h2{
+        text-transform:uppercase;
+        font-family: "linotype_didotroman";
+        font-size: large;
+        padding-left: 10px;
+        padding-top: 5%;
+    }
+    .price{
+        font-family: brandon_grotesquelight;
+        font-size: x-large;
+        color: $brown;
+        padding-left: 10px;
+        padding-right: 0;
+    }
+    .card-text{
+        padding-left: 10px;
+        color: $brown;
+        font-size: x-small;
+        .col{
+            padding-left: 3%;
+            padding-right: 0%;
+            li{
+                padding-top: 3%;
+                padding-bottom: 3%;
+            }
+        }
+    }
+    .card-details{
+        padding-right: 10px;
+        color: $brown;
+        font-size: x-small;
+        text-align: end;
+    }
+    img {
+        max-width: 90%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -50%;
+    }
+}
+
+
+.card-footer{
+    background: none;
+    border: none;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+.card-btn{
+    color: white;
+    font-family: "avant_gardedemiregular";
+    text-transform:uppercase;
+    background: $green;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: small;
+    &:hover {
+        background: $greyBlue;
+        transition: all 0.5s;
+    }
+}
+
+
